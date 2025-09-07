@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# Serve existing files and directories as is
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Route everything else to appropriate static files
+RewriteRule ^$ index.html [L]
+RewriteRule ^massage/?$ massage/index.html [L]
+RewriteRule ^tropical-store/?$ tropical-store/index.html [L]
+RewriteRule ^store/?$ store/index.html [L]
+RewriteRule ^admin/?$ admin/index.html [L]
+RewriteRule ^admin/([^/]+)/?$ admin/$1/index.html [L]
