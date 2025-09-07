@@ -109,7 +109,7 @@ export default function Header({ variant = 'default' }: HeaderProps = {}) {
             {/* Enhanced Decorative icon */}
             <div className="relative mr-3 group-hover:scale-110 transition-transform duration-700">
               <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#ed9aa4] via-[#c62138] to-[#d85a6b] flex items-center justify-center luxury-shadow group-hover:shadow-2xl transition-all duration-500 ring-2 ring-[#fbdde1]/50 group-hover:ring-[#f7bbc2]/80">
-                <span className="text-white font-bold text-sm font-playfair group-hover:scale-125 transition-transform duration-500 drop-shadow-lg">F</span>
+                <span className="text-white font-bold text-sm font-playfair group-hover:scale-125 transition-transform duration-500 drop-shadow-lg">T</span>
               </div>
               {/* Enhanced Pink Glow Effects */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#f7bbc2] via-[#ed9aa4] to-[#c62138] opacity-0 group-hover:opacity-70 transition-opacity duration-700 blur-md animate-gradient-x"></div>
@@ -205,7 +205,7 @@ export default function Header({ variant = 'default' }: HeaderProps = {}) {
                 </div>
               )}
               <a
-                href="https://wa.me/22785463056"
+                href="https://wa.me/22781214555"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`group border px-4 py-2 rounded-full font-semibold transition-all duration-500 hover:scale-105 luxury-shadow text-sm relative overflow-hidden ${
@@ -291,7 +291,7 @@ export default function Header({ variant = 'default' }: HeaderProps = {}) {
               </button>
               <div className="pt-4 space-y-3">
                 <a
-                  href="https://wa.me/22785463056"
+                  href="https://wa.me/22781214555"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center space-x-2 bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-semibold transition-all duration-300 luxury-shadow"

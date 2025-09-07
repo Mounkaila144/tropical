@@ -157,7 +157,7 @@ export default function HeroSection() {
             isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}>
             <Award className="text-[var(--tropical-gold)] w-4 h-4" />
-            <span className="text-sm font-medium tracking-wide">Centre de Bien-être Premium</span>
+            <span className="text-sm font-medium tracking-wide">Spécialistes en Massage Thérapeutique</span>
             <div className="flex space-x-1">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-3 h-3 text-[var(--tropical-gold)] fill-current" />
@@ -199,13 +199,14 @@ export default function HeroSection() {
           </div>
 
           {/* Enhanced Description */}
-          <p className={`text-lg md:text-xl lg:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed opacity-90 font-light transition-all duration-1000 delay-900 ${
+          <p className={`text-lg md:text-xl lg:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed opacity-90 font-light transition-all duration-1000 delay-900 ${
             isLoaded ? 'opacity-90 translate-y-0' : 'opacity-0 translate-y-4'
           }`}>
-            Découvrez l&apos;excellence de la beauté et du bien-être avec nos services premium :
-            <span className="text-[var(--tropical-gold)] font-medium"> coiffure homme professionnelle</span>,
-            <span className="text-[var(--tropical-gold)] font-medium"> massages relaxants</span>,
-            <span className="text-[var(--tropical-gold)] font-medium"> soins de visage et épilation</span>.
+            Découvrez l&apos;art du massage thérapeutique avec nos techniques professionnelles :
+            <br className="hidden md:block" />
+            <span className="text-[var(--tropical-gold)] font-medium"> Massage Relaxant & Lomi Lomi</span>,
+            <span className="text-[var(--tropical-gold)] font-medium"> Massage Infrarouge & Tonic</span>,
+            <span className="text-[var(--tropical-gold)] font-medium"> Ventouse Thérapie & Massage Thaï</span>.
           </p>
 
           {/* Stats Section */}
@@ -213,16 +214,20 @@ export default function HeroSection() {
             isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-[var(--tropical-gold)] mb-1">1000+</div>
-              <div className="text-sm text-white/80 tracking-wide">Clients Satisfaits</div>
+              <div className="text-3xl md:text-4xl font-bold text-[var(--tropical-gold)] mb-1">8</div>
+              <div className="text-sm text-white/80 tracking-wide">Types de Massage</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-[var(--tropical-gold)] mb-1">5★</div>
-              <div className="text-sm text-white/80 tracking-wide">Note Moyenne</div>
+              <div className="text-3xl md:text-4xl font-bold text-[var(--tropical-gold)] mb-1">15min</div>
+              <div className="text-sm text-white/80 tracking-wide">à 1h de Détente</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-[var(--tropical-gold)] mb-1">5+</div>
-              <div className="text-sm text-white/80 tracking-wide">Années d&apos;Expérience</div>
+              <div className="text-3xl md:text-4xl font-bold text-[var(--tropical-gold)] mb-1">15.000F</div>
+              <div className="text-sm text-white/80 tracking-wide">À partir de</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-[var(--tropical-gold)] mb-1">100%</div>
+              <div className="text-sm text-white/80 tracking-wide">Bien-être Garanti</div>
             </div>
           </div>
 
@@ -231,27 +236,27 @@ export default function HeroSection() {
             isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}>
             <Button
-              onClick={() => window.location.href = '/massage'}
+              onClick={() => scrollToSection('massage')}
               size="lg"
-              aria-label="Découvrir nos services de massage et kinésithérapie"
+              aria-label="Découvrir nos services de massage thérapeutique"
               className="group tropical-luxury-gradient-dark text-white hover:opacity-90 transition-all duration-500 px-10 py-5 text-lg hover-lift luxury-shadow rounded-full relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-[var(--tropical-gold)]"
             >
               <span className="relative z-10 flex items-center space-x-2">
                 <Sparkles className="w-5 h-5 group-hover:animate-spin transition-transform duration-500" />
-                <span>Découvrir Nos Services</span>
+                <span>Explorer Nos Massages</span>
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-[var(--tropical-gold)]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </Button>
             <Button
-              onClick={() => window.location.href = '/tropical-store'}
+              onClick={() => scrollToSection('contact')}
               size="lg"
               variant="outline"
-              aria-label="Visiter notre boutique en ligne tropical Store"
+              aria-label="Réserver un massage ou nous contacter"
               className="group luxury-backdrop border-2 border-white/40 text-white hover:bg-white/20 hover:border-[var(--tropical-gold)] transition-all duration-500 px-10 py-5 text-lg hover-lift luxury-border rounded-full relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-[var(--tropical-gold)]"
             >
               <span className="relative z-10 flex items-center space-x-2">
                 <Heart className="w-5 h-5 group-hover:animate-pulse transition-transform duration-500" />
-                <span>Visiter tropical Store</span>
+                <span>Réserver Maintenant</span>
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[var(--tropical-gold)]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </Button>

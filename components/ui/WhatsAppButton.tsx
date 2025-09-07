@@ -3,7 +3,7 @@
 import { MessageCircle } from 'lucide-react';
 
 export default function WhatsAppButton() {
-  const whatsappNumber = "22785463056";
+  const whatsappNumber = "22781214555";
   const message = "Bonjour, je souhaite prendre rendez-vous chez Tropical Massage.";
   
   const handleWhatsAppClick = () => {

@@ -8,67 +8,83 @@ import { Badge } from '@/components/ui/badge';
 const services = [
   {
     name: 'Massage Relaxant',
-    description: 'Manœuvres douces, effleurages et lissages pour dénouer les tensions sans douleur.',
+    description: 'Le massage relaxant est composé de manœuvres douces, d\'effleurages, de lissages fluides. Les gestes sont lents et légèrement appuyés afin de dénouer les tensions du massé sans que celui-ci ne ressente aucune douleur.',
     duration: '30 min',
     price: '20.000F',
     image: 'https://images.pexels.com/photos/3757952/pexels-photo-3757952.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    popular: true
+    popular: true,
+    benefits: ['Dénoue les tensions', 'Sans douleur', 'Relaxation profonde'],
+    details: 'Ce massage utilise des manœuvres douces et des effleurages pour une détente complète du corps.'
   },
   {
     name: 'Massage Lomi Lomi',
-    description: 'Massage hawaïen aux longs mouvements enveloppants pour une détente profonde et l’harmonie corps‑esprit.',
+    description: 'Ce massage est pratiqué à Hawaï depuis des centaines d\'années. De longs mouvements de caresses fluides et enveloppants alternent avec des mouvements plus fermes et rythmés. Traditionnellement, le but de ce massage est d\'harmoniser l\'énergie vitale afin de rétablir l\'équilibre du corps.',
     duration: '40 min',
     price: '25.000F',
     image: 'https://images.pexels.com/photos/3985360/pexels-photo-3985360.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    popular: false
+    popular: false,
+    benefits: ['Harmonise l\'énergie vitale', 'Rétablit l\'équilibre', 'Déconnexion complète', 'Relaxation profonde'],
+    details: 'Si vous souhaitez vous déconnecter complètement, vous relaxer et vous détendre en profondeur, le massage Lomi Lomi est la bonne solution. Le (la) massé(e) est allongé sur la table de massage et l\'artisan vient masser tout le corps.'
   },
   {
     name: 'Massage Infrarouge',
-    description: 'Chaleur infrarouge ciblée pour relâcher les muscles et soulager les douleurs (dos, cou, épaules…).',
+    description: 'Cette lampe infrarouge multifonction peut être utilisée pour soulager les douleurs musculaires, désinfecter et stériliser. Une chaleur bienfaisante qui permet de relâcher les muscles. La lumière infrarouge a la capacité de pénétrer dans les couches de la peau.',
     duration: '30 min',
     price: '25.000F',
     image: 'https://images.pexels.com/photos/3755706/pexels-photo-3755706.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    popular: true
+    popular: true,
+    benefits: ['Soulage les douleurs (dos, cou, épaule, bras, genoux)', 'Bénéfique pour peau acnéique', 'Anti-vieillissement (rides, cicatrices, vergetures)', 'Traite autres affections cutanées'],
+    details: 'Les risques liés aux infrarouges sont minimes comparés aux bienfaits apportés par la chaleur.'
   },
   {
     name: 'Ventouse Thérapie',
-    description: 'Cupping traditionnel: pose de ventouses pour stimuler la circulation, drainer et apaiser les tensions.',
+    description: 'La technique des ventouses est utilisée depuis des milliers d\'années en Asie pour soulager les maux, les douleurs et les blocages. Les ventouses sont placées sur différents points stratégiques du corps (dos, ventre, bras, jambes) afin d\'extraire les toxines et faire circuler l\'énergie.',
     duration: '1 h',
     price: '30.000F',
     image: 'https://images.pexels.com/photos/3757952/pexels-photo-3757952.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    popular: true
+    popular: true,
+    benefits: ['Sensation de légèreté', 'Réduction des douleurs', 'Stimulation de la circulation sanguine et lymphatique', 'Purification du sang'],
+    details: 'La pose des ventouses se fait à l\'aide d\'une flamme que l\'on introduit dans la ventouse afin de chasser l\'air et créer une aspiration au point de pose.'
   },
   {
     name: 'Massage Assis',
-    description: 'Massage sur chaise, habillé: pressions, étirements et percussions du dos, nuque et épaules.',
+    description: 'Le protocole du massage assis est relativement simple. Il est mené sur une personne habillée à travers ses vêtements, sur l\'ensemble de la partie haute du corps. Ce dernier est travaillé par un enchaînement précis : pressions, percussions, étirements des épaules, des bras, de la nuque, pressions sur le dos.',
     duration: '15 min',
     price: '15.000F',
     image: 'https://images.pexels.com/photos/3755706/pexels-photo-3755706.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    popular: false
+    popular: false,
+    benefits: ['Relaxation rapide', 'Remise en position des vertèbres', 'Amélioration circulation sanguine', 'Distribution de l\'énergie'],
+    details: 'Pour finir, le praticien remet les vertèbres en position et favorise le retour de la circulation sanguine. Ce massage permet au patient de se relaxer et de distribuer correctement l\'énergie dans son corps.'
   },
   {
     name: 'Massage Tonic',
-    description: 'Plus appuyé qu’un relaxant, idéal pour les douleurs musculaires et la récupération sportive.',
+    description: 'Consiste à masser avec plus de force que le massage relaxant. Adapté à ceux qui ressentent des douleurs musculaires du dos, etc. Adapté aux sportifs après une activité physique intense ou à préparer le corps à une activité physique.',
     duration: '45 min',
     price: '25.000F',
     image: 'https://images.pexels.com/photos/3985360/pexels-photo-3985360.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    popular: false
+    popular: false,
+    benefits: ['Soulage douleurs musculaires', 'Récupération sportive', 'Préparation physique', 'Massage plus intense'],
+    details: 'Recommandé de combiner au bain de vapeur appelé Hammam.'
   },
   {
     name: 'Massage Relaxant Duo',
-    description: 'Massage en duo dans la même salle: une parenthèse de détente à deux (amis, couple ou famille).',
+    description: 'Le massage en duo se caractérise par le fait d\'être massé à deux dans une même salle. Cette prestation est idéale pour s\'offrir une parenthèse de détente entre amis, en couple ou encore en famille.',
     duration: '30 min',
     price: '30.000F',
     image: 'https://images.pexels.com/photos/3757952/pexels-photo-3757952.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    popular: true
+    popular: true,
+    benefits: ['Expérience partagée', 'Détente à deux', 'Moment privilégié', 'Ambiance relaxante'],
+    details: 'Parfait pour partager un moment de bien-être avec votre proche dans un cadre intimiste et relaxant.'
   },
   {
     name: 'Massage Thaï',
-    description: 'Étirements passifs et pressions pour relâcher les tensions et améliorer la souplesse et la circulation.',
+    description: 'Le massage thaïlandais est une technique de massothérapie qui consiste à détendre tout le corps afin de chasser les angoisses en créant un bien-être mental et physique. C\'est un massage qui se pratique en tenue (yoga passif), également appelé stretching thaïlandais.',
     duration: '1 h',
     price: '30.000F',
     image: 'https://images.pexels.com/photos/3985360/pexels-photo-3985360.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    popular: false
+    popular: false,
+    benefits: ['Meilleure souplesse', 'Meilleure mobilité', 'Bien-être garanti', 'Détente mentale et physique'],
+    details: 'La personne n\'a pas besoin de faire quoi que ce soit : le praticien effectue tous les mouvements. C\'est du yoga passif où vous vous laissez porter.'
   }
 ];
 
@@ -197,16 +213,18 @@ export default function MassageSection() {
           {services.map((service, index) => (
             <Card
               key={index}
-              className={`border-0 bg-white rounded-3xl overflow-hidden shadow-lg ${
+              className={`border-0 bg-white rounded-3xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group cursor-pointer ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{transitionDelay: `${400 + index * 150}ms`}}
+              onMouseEnter={() => setHoveredCard(index)}
+              onMouseLeave={() => setHoveredCard(null)}
             >
               <div className="relative">
                 <img
                   src={service.image}
                   alt={service.name}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
 
@@ -221,6 +239,23 @@ export default function MassageSection() {
                 <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm rounded-full px-3 py-1">
                   <span className="text-[var(--tropical-burgundy)] font-bold text-sm">{service.price}</span>
                 </div>
+
+                {/* Hover overlay with additional details */}
+                <div className={`absolute inset-0 bg-[var(--tropical-burgundy)]/95 backdrop-blur-sm transition-opacity duration-300 ${
+                  hoveredCard === index ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                }`}>
+                  <div className="p-6 text-white h-full flex flex-col justify-center">
+                    <h4 className="font-semibold mb-3 text-lg">Bienfaits :</h4>
+                    <ul className="space-y-1 text-sm">
+                      {service.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center">
+                          <div className="w-1.5 h-1.5 bg-[var(--tropical-gold)] rounded-full mr-2 flex-shrink-0"></div>
+                          <span>{benefit}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
 
               <CardHeader className="p-6">
@@ -234,9 +269,18 @@ export default function MassageSection() {
                   </div>
                 </div>
 
-                <CardDescription className="text-gray-600 leading-relaxed mb-6">
+                <CardDescription className="text-gray-600 leading-relaxed mb-4 line-clamp-3">
                   {service.description}
                 </CardDescription>
+
+                {/* Service Details - shown when not hovered */}
+                <div className={`mb-4 transition-opacity duration-300 ${
+                  hoveredCard === index ? 'opacity-0' : 'opacity-100'
+                }`}>
+                  <p className="text-sm text-gray-500 italic">
+                    {service.details}
+                  </p>
+                </div>
 
                 {/* Modern Service Features */}
                 <div className="flex items-center justify-between">
@@ -252,7 +296,7 @@ export default function MassageSection() {
                   </div>
 
                   {/* CTA Button */}
-                  <button className="bg-[var(--tropical-burgundy)] text-white px-4 py-2 rounded-full text-sm font-medium">
+                  <button className="bg-[var(--tropical-burgundy)] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[var(--tropical-burgundy)]/90 transition-colors">
                     Réserver
                   </button>
                 </div>
@@ -288,7 +332,7 @@ export default function MassageSection() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="https://wa.me/22785463056"
+                  href="https://wa.me/22781214555"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block bg-white text-[var(--tropical-burgundy)] px-8 py-3 rounded-lg font-semibold luxury-shadow"
@@ -296,7 +340,7 @@ export default function MassageSection() {
                   WhatsApp
                 </a>
                 <a
-                  href="tel:+22785463056"
+                  href="tel:+22781214555"
                   className="inline-block luxury-backdrop border border-white/30 text-white px-8 py-3 rounded-lg font-semibold"
                 >
                   Appeler Maintenant

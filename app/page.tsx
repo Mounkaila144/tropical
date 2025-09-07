@@ -32,11 +32,11 @@ export default function Home() {
     alternateName: 'Tropical Massage - Centre de Bien-être',
     description: 'Tropical Massage - Salon de coiffure homme professionnel, services de massage, épilation, soins de visage et pédicure/manicure à Niamey, Niger.',
     url: 'https://tropical-massage.com',
-    telephone: '+22785463056',
+    telephone: '+22781214555',
     email: 'contact@tropicalmassage.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Bobiel Ecole, Bakalleyezé Gawado',
+      streetAddress: 'H3CR+877, Fenifoot vers pharmacie les jumelles',
       addressLocality: 'Niamey',
       addressCountry: 'NE',
       addressRegion: 'Niamey'
@@ -55,7 +55,7 @@ export default function Home() {
       'https://tropical-massage.com/image/tropical-massage-niamey.jpg'
     ],
     sameAs: [
-      'https://wa.me/22785463056',
+      'https://wa.me/22781214555',
       'https://wa.me/227812145552925'
     ],
     hasOfferCatalog: {
@@ -113,7 +113,7 @@ export default function Home() {
       {/* SEO Content Hidden */}
       <div className="sr-only">
         <h1>Tropical Massage - Salon de Coiffure Homme et Centre de Bien-être à Niamey, Niger</h1>
-        <p>Tropical Massage est votre salon de coiffure homme professionnel et centre de bien-être de référence à Niamey, Niger. Nous proposons des services de coiffure professionnelle, massage relaxant et thérapeutique, épilation complète, soins de visage, pédicure et manucure. Situé à Bobiel Ecole, Bakalleyezé Gawado, notre salon offre des soins de qualité dans un environnement moderne. Contactez-nous au +227 85 46 30 56 ou +227 81 21 45 55 pour réserver.</p>
+        <p>Tropical Massage est votre salon de coiffure homme professionnel et centre de bien-être de référence à Niamey, Niger. Nous proposons des services de coiffure professionnelle, massage relaxant et thérapeutique, épilation complète, soins de visage, pédicure et manucure. Situé à H3CR+877, Fenifoot vers pharmacie les jumelles, notre salon offre des soins de qualité dans un environnement moderne. Contactez-nous au +227 85 46 30 56 ou +227 81 21 45 55 pour réserver.</p>
         <h2>Services Tropical Massage à Niamey</h2>
         <ul>
           <li>Coiffure VIP adulte homme à Niamey - 4 000F</li>
@@ -126,7 +126,7 @@ export default function Home() {
           <li>Services de bien-être premium à Bobiel Ecole</li>
         </ul>
         <h3>Pourquoi choisir Tropical Massage à Niamey ?</h3>
-        <p>Tropical Massage situé à Bobiel Ecole, Bakalleyezé Gawado à Niamey, Niger, vous accueille dans un salon moderne et professionnel. Nos coiffeurs et thérapeutes qualifiés vous proposent des services personnalisés : coiffure homme professionnelle, massages relaxants, soins de visage, épilation et pédicure/manucure. Nous sommes votre partenaire beauté et bien-être au Niger.</p>
+        <p>Tropical Massage situé à H3CR+877, Fenifoot vers pharmacie les jumelles à Niamey, Niger, vous accueille dans un salon moderne et professionnel. Nos coiffeurs et thérapeutes qualifiés vous proposent des services personnalisés : coiffure homme professionnelle, massages relaxants, soins de visage, épilation et pédicure/manucure. Nous sommes votre partenaire beauté et bien-être au Niger.</p>
       </div>
 
       <Header />

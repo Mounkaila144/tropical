@@ -46,14 +46,14 @@ export default function ContactSection() {
     {
       icon: MapPin,
       title: 'Adresse',
-      content: ['Bobiel Ecole', 'Bakalleyezé Gawado', 'Niamey, Niger'],
-      link: 'https://maps.google.com'
+      content: ['H3CR+877', 'Fenifoot vers pharmacie les jumelles', 'Niamey, Niger'],
+      link: 'https://maps.google.com/maps/search/H3CR+877,+Niamey,+Niger'
     },
     {
       icon: Phone,
       title: 'Téléphone',
       content: ['+227 85 46 30 56', '+227 81 21 45 55'],
-      link: 'tel:+22785463056'
+      link: 'tel:+22781214555'
     },
     {
       icon: Mail,
@@ -156,7 +156,8 @@ export default function ContactSection() {
                 <div className="text-center text-gray-600">
                   <MapPin size={48} className="mx-auto mb-2 text-[var(--tropical-burgundy)]" />
                   <p className="font-medium">Carte interactive</p>
-                  <p className="text-sm">Bobiel Ecole, Bakalleyezé Gawado</p>
+                  <p className="text-sm">H3CR+877</p>
+                  <p className="text-sm">Fenifoot vers pharmacie les jumelles</p>
                   <p className="text-sm">Niamey, Niger</p>
                 </div>
               </div>
