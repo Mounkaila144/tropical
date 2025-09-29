@@ -274,16 +274,6 @@ export default function Header({ variant = 'default' }: HeaderProps = {}) {
               >
                 💆‍♀️ Services
               </button>
-              <a
-                href="/tropical-store"
-                className={`text-left transition-all duration-300 py-3 px-4 rounded-lg font-medium block ${
-                  variant === 'light'
-                    ? 'text-gray-800 hover:text-[#c62138] hover:bg-gray-100'
-                    : 'text-white hover:text-[#ed9aa4] hover:bg-white/20'
-                }`}
-              >
-                🛍️ tropical Store
-              </a>
               <button
                 onClick={() => scrollToSection('contact')}
                 className={`text-left transition-all duration-300 py-3 px-4 rounded-lg font-medium ${
