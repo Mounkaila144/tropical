@@ -56,29 +56,50 @@ export default function HeroSection() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const headerHeight = 100;
+      const elementPosition = element.offsetTop - headerHeight;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
     }
   };
 
   return (
-    <section ref={heroRef} id="accueil" className="relative h-screen overflow-hidden pt-36 sm:pt-16 md:pt-18 mb-0">
-      {/* Enhanced Background optimisé pour logo vert #b3dccc */}
-      <div className="absolute inset-0 tropical-luxury-gradient-radial opacity-20"></div>
-      
-      {/* Zone claire spéciale pour le logo */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-black/10 via-transparent to-transparent"></div>
+    <section ref={heroRef} id="accueil" className="relative h-screen overflow-hidden mb-0" style={{ paddingTop: 'max(4rem, 5vh)', minHeight: 'calc(50vh - 2rem)' }}>
+      {/* Enhanced Adaptive Background with better contrast */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/40"></div>
 
-      {/* Floating Particles */}
+      {/* Adaptive overlay that adjusts based on slide */}
+      <div
+        className="absolute inset-0 transition-opacity duration-1000"
+        style={{
+          background: currentSlide === 0
+            ? 'radial-gradient(ellipse at center, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 70%)'
+            : 'linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(139,69,19,0.3) 50%, rgba(0,0,0,0.7) 100%)'
+        }}
+      ></div>
+
+      {/* Logo highlight zone with adaptive colors */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-[rgba(212,175,55,0.1)] to-transparent"></div>
+
+      {/* Floating Particles with Adaptive Colors */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(20)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 bg-white/20 rounded-full animate-float"
+            className="absolute w-1 h-1 rounded-full animate-float"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
               animationDelay: `${Math.random() * 5}s`,
               animationDuration: `${3 + Math.random() * 4}s`,
+              background: currentSlide === 0
+                ? `rgba(255, 255, 255, ${0.1 + Math.random() * 0.2})`
+                : `rgba(212, 175, 55, ${0.1 + Math.random() * 0.3})`,
+              boxShadow: currentSlide === 0
+                ? `0 0 ${4 + Math.random() * 6}px rgba(255, 255, 255, 0.3)`
+                : `0 0 ${4 + Math.random() * 6}px rgba(212, 175, 55, 0.4)`
             }}
           />
         ))}
@@ -114,20 +135,40 @@ export default function HeroSection() {
         ))}
       </div>
 
-      {/* Accessible Carousel Controls */}
+      {/* Accessible Carousel Controls with Adaptive Colors */}
       <button
         onClick={prevSlide}
         aria-label="Image précédente"
-        className="absolute left-6 top-1/2 transform -translate-y-1/2 z-10 p-4 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--tropical-gold)]"
+        className="absolute left-6 top-1/2 transform -translate-y-1/2 z-10 p-4 rounded-full backdrop-blur-sm transition-all duration-300 focus:outline-none focus:ring-2"
+        style={{
+          background: currentSlide === 0
+            ? 'rgba(255, 255, 255, 0.15)'
+            : 'rgba(212, 175, 55, 0.2)',
+          border: currentSlide === 0 ? '1px solid rgba(255, 255, 255, 0.3)' : '1px solid rgba(212, 175, 55, 0.4)'
+        }}
       >
-        <ChevronLeft className="text-white" size={24} />
+        <ChevronLeft
+          className="transition-all duration-300"
+          style={{ color: currentSlide === 0 ? '#ffffff' : '#d4af37' }}
+          size={24}
+        />
       </button>
       <button
         onClick={nextSlide}
         aria-label="Image suivante"
-        className="absolute right-6 top-1/2 transform -translate-y-1/2 z-10 p-4 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--tropical-gold)]"
+        className="absolute right-6 top-1/2 transform -translate-y-1/2 z-10 p-4 rounded-full backdrop-blur-sm transition-all duration-300 focus:outline-none focus:ring-2"
+        style={{
+          background: currentSlide === 0
+            ? 'rgba(255, 255, 255, 0.15)'
+            : 'rgba(212, 175, 55, 0.2)',
+          border: currentSlide === 0 ? '1px solid rgba(255, 255, 255, 0.3)' : '1px solid rgba(212, 175, 55, 0.4)'
+        }}
       >
-        <ChevronRight className="text-white" size={24} />
+        <ChevronRight
+          className="transition-all duration-300"
+          style={{ color: currentSlide === 0 ? '#ffffff' : '#d4af37' }}
+          size={24}
+        />
       </button>
 
       {/* Accessible Carousel Indicators */}
@@ -146,48 +187,87 @@ export default function HeroSection() {
         ))}
       </div>
 
-      {/* Enhanced Hero Content */}
-      <div className="relative z-10 h-[calc(100vh-3.5rem)] sm:h-[calc(100vh-4rem)] md:h-[calc(100vh-4.5rem)] flex items-center justify-center py-4 sm:py-8">
-        <div className={`text-center text-white max-w-5xl mx-auto px-4 transition-all duration-1000 ${
+      {/* Enhanced Hero Content with Adaptive Colors */}
+      <div className="relative z-10 flex items-center justify-center py-4 sm:py-8" style={{ minHeight: 'calc(100vh - max(8rem, 10vh) - 4rem)' }}>
+        <div className={`text-center max-w-5xl mx-auto px-4 transition-all duration-1000 ${
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
 
-          {/* Premium Badge */}
-          <div className={`inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-2 mb-8 transition-all duration-700 delay-300 ${
+          {/* Premium Badge with Enhanced Colors */}
+          <div className={`inline-flex items-center space-x-2 backdrop-blur-md rounded-full px-6 py-3 mb-8 transition-all duration-700 delay-300 border-2 ${
             isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-          }`}>
-            <Award className="text-[var(--tropical-gold)] w-4 h-4" />
-            <span className="text-sm font-medium tracking-wide">Spécialistes en Massage Thérapeutique</span>
+          }`}
+          style={{
+            background: currentSlide === 0
+              ? 'rgba(255, 255, 255, 0.15)'
+              : 'rgba(212, 175, 55, 0.1)',
+            borderColor: currentSlide === 0
+              ? 'rgba(255, 255, 255, 0.3)'
+              : 'rgba(212, 175, 55, 0.4)'
+          }}>
+            <Award className="w-5 h-5" style={{ color: currentSlide === 0 ? '#ffffff' : '#d4af37' }} />
+            <span className="text-sm font-semibold tracking-wide" style={{ color: currentSlide === 0 ? '#ffffff' : '#d4af37' }}>
+              Spécialistes en Massage Thérapeutique
+            </span>
             <div className="flex space-x-1">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-3 h-3 text-[var(--tropical-gold)] fill-current" />
+                <Star
+                  key={i}
+                  className="w-3 h-3 fill-current"
+                  style={{ color: currentSlide === 0 ? '#ffffff' : '#d4af37' }}
+                />
               ))}
             </div>
           </div>
 
-          {/* Main Logo with Enhanced Animation */}
+          {/* Main Logo with Enhanced Animation and Adaptive Colors */}
           <div className={`flex items-center justify-center mb-8 transition-all duration-1000 delay-500 ${
             isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
           }`}>
-            <Sparkles className="text-[var(--tropical-gold)] mr-6 drop-shadow-lg animate-pulse luxury-text-glow" size={40} />
-            <div className="tropical-logo-container">
+            <Sparkles
+              className="mr-6 drop-shadow-lg animate-pulse size-10"
+              style={{
+                color: currentSlide === 0 ? '#ffffff' : '#d4af37',
+                filter: currentSlide === 0
+                  ? 'drop-shadow(0 0 10px rgba(255,255,255,0.5))'
+                  : 'drop-shadow(0 0 10px rgba(212,175,55,0.8))'
+              }}
+            />
+            <div className="tropical-logo-container relative">
               <Image
                 src="/image/tropical-massage-niamey-logo.png"
                 alt="Tropical Massage - Salon de Coiffure Homme et Centre de Bien-être à Niamey, Niger"
                 width={400}
                 height={200}
-                className="w-80 md:w-96 lg:w-[500px] h-auto drop-shadow-2xl hover:scale-105 transition-all duration-500 filter hover:brightness-110"
+                className="w-80 md:w-96 lg:w-[500px] h-auto hover:scale-105 transition-all duration-500"
+                style={{
+                  filter: currentSlide === 0
+                    ? 'drop-shadow(0 4px 20px rgba(0,0,0,0.3)) brightness(1.1) contrast(1.1)'
+                    : 'drop-shadow(0 4px 20px rgba(212,175,55,0.2)) brightness(1.2) contrast(1.2))'
+                }}
                 priority
               />
-              {/* Effet de brillance animé sur le logo */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                   style={{
-                     animation: 'logoShimmer 3s ease-in-out infinite',
-                     animationDelay: '1s'
-                   }}>
-              </div>
+              {/* Enhanced shimmer effect */}
+              <div
+                className="absolute inset-0 bg-gradient-to-r opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                style={{
+                  background: currentSlide === 0
+                    ? 'linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)'
+                    : 'linear-gradient(90deg, transparent, rgba(212,175,55,0.6), transparent)',
+                  animation: 'logoShimmer 3s ease-in-out infinite',
+                  animationDelay: '1s'
+                }}
+              />
             </div>
-            <Heart className="text-[var(--tropical-gold)] ml-6 drop-shadow-lg animate-pulse luxury-text-glow" size={40} />
+            <Heart
+              className="ml-6 drop-shadow-lg animate-pulse size-10"
+              style={{
+                color: currentSlide === 0 ? '#ffffff' : '#d4af37',
+                filter: currentSlide === 0
+                  ? 'drop-shadow(0 0 10px rgba(255,255,255,0.5))'
+                  : 'drop-shadow(0 0 10px rgba(212,175,55,0.8))'
+              }}
+            />
             <span className="sr-only">Tropical Massage - Salon de Coiffure Homme et Centre de Bien-être à Niamey, Niger</span>
           </div>
 
@@ -195,7 +275,14 @@ export default function HeroSection() {
           <div className={`mb-8 transition-all duration-1000 delay-700 ${
             isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}>
-            <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-[var(--tropical-gold)] to-transparent mx-auto"></div>
+            <div
+              className="w-24 h-0.5 mx-auto"
+              style={{
+                background: currentSlide === 0
+                  ? 'linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent)'
+                  : 'linear-gradient(90deg, transparent, rgba(212,175,55,0.9), transparent)'
+              }}
+            />
           </div>
 
           {/* Enhanced Description */}
@@ -209,25 +296,69 @@ export default function HeroSection() {
             <span className="text-[var(--tropical-gold)] font-medium"> Ventouse Thérapie & Massage Thaï</span>.
           </p>
 
-          {/* Stats Section */}
+          {/* Stats Section with Adaptive Colors */}
           <div className={`flex flex-wrap justify-center gap-8 mb-12 transition-all duration-1000 delay-1100 ${
             isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-[var(--tropical-gold)] mb-1">8</div>
-              <div className="text-sm text-white/80 tracking-wide">Types de Massage</div>
+              <div
+                className="text-3xl md:text-4xl font-bold mb-1"
+                style={{
+                  color: currentSlide === 0 ? '#d4af37' : '#ffffff',
+                  textShadow: currentSlide === 0
+                    ? '0 0 15px rgba(212,175,55,0.8)'
+                    : '0 0 15px rgba(255,255,255,0.6)'
+                }}
+              >8</div>
+              <div
+                className="text-sm tracking-wide"
+                style={{ color: currentSlide === 0 ? 'rgba(255,255,255,0.9)' : 'rgba(244,182,189,0.9)' }}
+              >Types de Massage</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-[var(--tropical-gold)] mb-1">15min</div>
-              <div className="text-sm text-white/80 tracking-wide">à 1h de Détente</div>
+              <div
+                className="text-3xl md:text-4xl font-bold mb-1"
+                style={{
+                  color: currentSlide === 0 ? '#d4af37' : '#ffffff',
+                  textShadow: currentSlide === 0
+                    ? '0 0 15px rgba(212,175,55,0.8)'
+                    : '0 0 15px rgba(255,255,255,0.6)'
+                }}
+              >15min</div>
+              <div
+                className="text-sm tracking-wide"
+                style={{ color: currentSlide === 0 ? 'rgba(255,255,255,0.9)' : 'rgba(244,182,189,0.9)' }}
+              >à 1h de Détente</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-[var(--tropical-gold)] mb-1">15.000F</div>
-              <div className="text-sm text-white/80 tracking-wide">À partir de</div>
+              <div
+                className="text-3xl md:text-4xl font-bold mb-1"
+                style={{
+                  color: currentSlide === 0 ? '#d4af37' : '#ffffff',
+                  textShadow: currentSlide === 0
+                    ? '0 0 15px rgba(212,175,55,0.8)'
+                    : '0 0 15px rgba(255,255,255,0.6)'
+                }}
+              >15.000F</div>
+              <div
+                className="text-sm tracking-wide"
+                style={{ color: currentSlide === 0 ? 'rgba(255,255,255,0.9)' : 'rgba(244,182,189,0.9)' }}
+              >À partir de</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-[var(--tropical-gold)] mb-1">100%</div>
-              <div className="text-sm text-white/80 tracking-wide">Bien-être Garanti</div>
+              <div
+                className="text-3xl md:text-4xl font-bold mb-1"
+                style={{
+                  color: currentSlide === 0 ? '#d4af37' : '#ffffff',
+                  textShadow: currentSlide === 0
+                    ? '0 0 15px rgba(212,175,55,0.8)'
+                    : '0 0 15px rgba(255,255,255,0.6)'
+                }}
+              >100%</div>
+              <div
+                className="text-sm tracking-wide"
+                style={{ color: currentSlide === 0 ? 'rgba(255,255,255,0.9)' : 'rgba(244,182,189,0.9)' }}
+              >Bien-être Garanti</div>
             </div>
           </div>
 
@@ -239,26 +370,63 @@ export default function HeroSection() {
               onClick={() => scrollToSection('massage')}
               size="lg"
               aria-label="Découvrir nos services de massage thérapeutique"
-              className="group tropical-luxury-gradient-dark text-white hover:opacity-90 transition-all duration-500 px-10 py-5 text-lg hover-lift luxury-shadow rounded-full relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-[var(--tropical-gold)]"
+              className="group hover:opacity-90 transition-all duration-500 px-10 py-5 text-lg hover-lift rounded-full relative overflow-hidden focus:outline-none focus:ring-2"
+              style={{
+                background: currentSlide === 0
+                  ? 'linear-gradient(135deg, rgba(212,175,55,0.9), rgba(255,215,0,0.8))'
+                  : 'linear-gradient(135deg, rgba(255,255,255,0.2), rgba(244,182,189,0.3))',
+                color: currentSlide === 0 ? '#000000' : '#ffffff',
+                border: currentSlide === 0 ? '2px solid rgba(212,175,55,0.3)' : '2px solid rgba(255,255,255,0.4)',
+                boxShadow: currentSlide === 0
+                  ? '0 8px 32px rgba(212,175,55,0.3)'
+                  : '0 8px 32px rgba(255,255,255,0.2)'
+              }}
             >
               <span className="relative z-10 flex items-center space-x-2">
-                <Sparkles className="w-5 h-5 group-hover:animate-spin transition-transform duration-500" />
-                <span>Explorer Nos Massages</span>
+                <Sparkles
+                  className="w-5 h-5 group-hover:animate-spin transition-transform duration-500"
+                  style={{ color: currentSlide === 0 ? '#ffffff' : '#d4af37' }}
+                />
+                <span className="font-semibold">Explorer Nos Massages</span>
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[var(--tropical-gold)]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                style={{
+                  background: currentSlide === 0
+                    ? 'linear-gradient(90deg, rgba(255,255,255,0.2), transparent, rgba(255,255,255,0.1))'
+                    : 'linear-gradient(90deg, rgba(212,175,55,0.3), transparent, rgba(212,175,55,0.1))'
+                }}
+              />
             </Button>
             <Button
               onClick={() => scrollToSection('contact')}
               size="lg"
               variant="outline"
               aria-label="Réserver un massage ou nous contacter"
-              className="group luxury-backdrop border-2 border-white/40 text-white hover:bg-white/20 hover:border-[var(--tropical-gold)] transition-all duration-500 px-10 py-5 text-lg hover-lift luxury-border rounded-full relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-[var(--tropical-gold)]"
+              className="group transition-all duration-500 px-10 py-5 text-lg hover-lift rounded-full relative overflow-hidden focus:outline-none focus:ring-2"
+              style={{
+                background: currentSlide === 0
+                  ? 'rgba(255,255,255,0.1)'
+                  : 'rgba(212,175,55,0.15)',
+                color: currentSlide === 0 ? '#ffffff' : '#d4af37',
+                border: currentSlide === 0 ? '2px solid rgba(255,255,255,0.4)' : '2px solid rgba(212,175,55,0.5)'
+              }}
             >
               <span className="relative z-10 flex items-center space-x-2">
-                <Heart className="w-5 h-5 group-hover:animate-pulse transition-transform duration-500" />
-                <span>Réserver Maintenant</span>
+                <Heart
+                  className="w-5 h-5 group-hover:animate-pulse transition-transform duration-500"
+                  style={{ color: currentSlide === 0 ? '#d4af37' : '#ffffff' }}
+                />
+                <span className="font-semibold">Réserver Maintenant</span>
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[var(--tropical-gold)]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                style={{
+                  background: currentSlide === 0
+                    ? 'linear-gradient(90deg, transparent, rgba(212,175,55,0.2))'
+                    : 'linear-gradient(90deg, transparent, rgba(255,255,255,0.2))'
+                }}
+              />
             </Button>
           </div>
         </div>

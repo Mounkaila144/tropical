@@ -25,7 +25,12 @@ export default function Header({ variant = 'default' }: HeaderProps = {}) {
 
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const headerHeight = 100; // Hauteur approximative du header + marge
+      const elementPosition = element.offsetTop - headerHeight;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
       setIsMenuOpen(false);
     }
   };

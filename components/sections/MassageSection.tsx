@@ -11,7 +11,7 @@ const services = [
     description: 'Le massage relaxant est composé de manœuvres douces, d\'effleurages, de lissages fluides. Les gestes sont lents et légèrement appuyés afin de dénouer les tensions du massé sans que celui-ci ne ressente aucune douleur.',
     duration: '30 min',
     price: '20.000F',
-    image: 'https://images.pexels.com/photos/3757952/pexels-photo-3757952.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '/image/massage/relaxant.png',
     popular: true,
     benefits: ['Dénoue les tensions', 'Sans douleur', 'Relaxation profonde'],
     details: 'Ce massage utilise des manœuvres douces et des effleurages pour une détente complète du corps.'
@@ -21,7 +21,7 @@ const services = [
     description: 'Ce massage est pratiqué à Hawaï depuis des centaines d\'années. De longs mouvements de caresses fluides et enveloppants alternent avec des mouvements plus fermes et rythmés. Traditionnellement, le but de ce massage est d\'harmoniser l\'énergie vitale afin de rétablir l\'équilibre du corps.',
     duration: '40 min',
     price: '25.000F',
-    image: 'https://images.pexels.com/photos/3985360/pexels-photo-3985360.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '/image/massage/lomi lomi.png',
     popular: false,
     benefits: ['Harmonise l\'énergie vitale', 'Rétablit l\'équilibre', 'Déconnexion complète', 'Relaxation profonde'],
     details: 'Si vous souhaitez vous déconnecter complètement, vous relaxer et vous détendre en profondeur, le massage Lomi Lomi est la bonne solution. Le (la) massé(e) est allongé sur la table de massage et l\'artisan vient masser tout le corps.'
@@ -31,7 +31,7 @@ const services = [
     description: 'Cette lampe infrarouge multifonction peut être utilisée pour soulager les douleurs musculaires, désinfecter et stériliser. Une chaleur bienfaisante qui permet de relâcher les muscles. La lumière infrarouge a la capacité de pénétrer dans les couches de la peau.',
     duration: '30 min',
     price: '25.000F',
-    image: 'https://images.pexels.com/photos/3755706/pexels-photo-3755706.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '/image/massage/infra-rouge.png',
     popular: true,
     benefits: ['Soulage les douleurs (dos, cou, épaule, bras, genoux)', 'Bénéfique pour peau acnéique', 'Anti-vieillissement (rides, cicatrices, vergetures)', 'Traite autres affections cutanées'],
     details: 'Les risques liés aux infrarouges sont minimes comparés aux bienfaits apportés par la chaleur.'
@@ -41,7 +41,7 @@ const services = [
     description: 'La technique des ventouses est utilisée depuis des milliers d\'années en Asie pour soulager les maux, les douleurs et les blocages. Les ventouses sont placées sur différents points stratégiques du corps (dos, ventre, bras, jambes) afin d\'extraire les toxines et faire circuler l\'énergie.',
     duration: '1 h',
     price: '30.000F',
-    image: 'https://images.pexels.com/photos/3757952/pexels-photo-3757952.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '/image/massage/ventouse.png',
     popular: true,
     benefits: ['Sensation de légèreté', 'Réduction des douleurs', 'Stimulation de la circulation sanguine et lymphatique', 'Purification du sang'],
     details: 'La pose des ventouses se fait à l\'aide d\'une flamme que l\'on introduit dans la ventouse afin de chasser l\'air et créer une aspiration au point de pose.'
@@ -51,7 +51,7 @@ const services = [
     description: 'Le protocole du massage assis est relativement simple. Il est mené sur une personne habillée à travers ses vêtements, sur l\'ensemble de la partie haute du corps. Ce dernier est travaillé par un enchaînement précis : pressions, percussions, étirements des épaules, des bras, de la nuque, pressions sur le dos.',
     duration: '15 min',
     price: '15.000F',
-    image: 'https://images.pexels.com/photos/3755706/pexels-photo-3755706.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '/image/massage/assis.png',
     popular: false,
     benefits: ['Relaxation rapide', 'Remise en position des vertèbres', 'Amélioration circulation sanguine', 'Distribution de l\'énergie'],
     details: 'Pour finir, le praticien remet les vertèbres en position et favorise le retour de la circulation sanguine. Ce massage permet au patient de se relaxer et de distribuer correctement l\'énergie dans son corps.'
@@ -61,7 +61,7 @@ const services = [
     description: 'Consiste à masser avec plus de force que le massage relaxant. Adapté à ceux qui ressentent des douleurs musculaires du dos, etc. Adapté aux sportifs après une activité physique intense ou à préparer le corps à une activité physique.',
     duration: '45 min',
     price: '25.000F',
-    image: 'https://images.pexels.com/photos/3985360/pexels-photo-3985360.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '/image/massage/tonic.png',
     popular: false,
     benefits: ['Soulage douleurs musculaires', 'Récupération sportive', 'Préparation physique', 'Massage plus intense'],
     details: 'Recommandé de combiner au bain de vapeur appelé Hammam.'
@@ -71,7 +71,7 @@ const services = [
     description: 'Le massage en duo se caractérise par le fait d\'être massé à deux dans une même salle. Cette prestation est idéale pour s\'offrir une parenthèse de détente entre amis, en couple ou encore en famille.',
     duration: '30 min',
     price: '30.000F',
-    image: 'https://images.pexels.com/photos/3757952/pexels-photo-3757952.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '/image/massage/duo.png',
     popular: true,
     benefits: ['Expérience partagée', 'Détente à deux', 'Moment privilégié', 'Ambiance relaxante'],
     details: 'Parfait pour partager un moment de bien-être avec votre proche dans un cadre intimiste et relaxant.'
@@ -81,7 +81,7 @@ const services = [
     description: 'Le massage thaïlandais est une technique de massothérapie qui consiste à détendre tout le corps afin de chasser les angoisses en créant un bien-être mental et physique. C\'est un massage qui se pratique en tenue (yoga passif), également appelé stretching thaïlandais.',
     duration: '1 h',
     price: '30.000F',
-    image: 'https://images.pexels.com/photos/3985360/pexels-photo-3985360.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '/image/massage/thai.png',
     popular: false,
     benefits: ['Meilleure souplesse', 'Meilleure mobilité', 'Bien-être garanti', 'Détente mentale et physique'],
     details: 'La personne n\'a pas besoin de faire quoi que ce soit : le praticien effectue tous les mouvements. C\'est du yoga passif où vous vous laissez porter.'
