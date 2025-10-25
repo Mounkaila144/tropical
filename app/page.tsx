@@ -113,7 +113,7 @@ export default function Home() {
       {/* SEO Content Hidden */}
       <div className="sr-only">
         <h1>Tropical Massage - Salon de Coiffure Homme et Centre de Bien-être à Niamey, Niger</h1>
-        <p>Tropical Massage est votre salon de coiffure homme professionnel et centre de bien-être de référence à Niamey, Niger. Nous proposons des services de coiffure professionnelle, massage relaxant et thérapeutique, épilation complète, soins de visage, pédicure et manucure. Situé à H3CR+877, Fenifoot vers pharmacie les jumelles, notre salon offre des soins de qualité dans un environnement moderne. Contactez-nous au +227 85 46 30 56 ou +227 81 21 45 55 pour réserver.</p>
+        <p>Tropical Massage est votre salon de coiffure homme professionnel et centre de bien-être de référence à Niamey, Niger. Nous proposons des services de coiffure professionnelle, massage relaxant et thérapeutique, épilation complète, soins de visage, pédicure et manucure. Situé à H3CR+877, Fenifoot vers pharmacie les jumelles, notre salon offre des soins de qualité dans un environnement moderne. Contactez-nous au +227 87 79 44 50 ou +227 81 21 45 55 pour réserver.</p>
         <h2>Services Tropical Massage à Niamey</h2>
         <ul>
           <li>Coiffure VIP adulte homme à Niamey - 4 000F</li>

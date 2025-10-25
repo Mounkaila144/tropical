@@ -87,8 +87,8 @@ export default function Footer() {
                   <MapPin size={14} className="text-[var(--tropical-burgundy)]" />
                 </div>
                 <div className="text-gray-300 leading-relaxed">
-                  <div>Quartier Recasement</div>
-                  <div>3ème latérite, plaque Adouwal Adamou</div>
+                  <div>Fenifoot</div>
+                  <div>vers pharmacie les jumelles</div>
                   <div>Niamey, Niger</div>
                 </div>
               </div>
@@ -99,13 +99,16 @@ export default function Footer() {
                 <a href="tel:+22781214555" className="text-gray-300 hover:text-[var(--tropical-gold)] transition-colors duration-300">
                   +227 81 21 45 55
                 </a>
+                  <a href="tel:+22787794450" className="text-gray-300 hover:text-[var(--tropical-gold)] transition-colors duration-300">
+                  +227 87 79 44 50
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-6 h-6 bg-[var(--tropical-burgundy)]/20 rounded-lg flex items-center justify-center">
                   <Mail size={14} className="text-[var(--tropical-burgundy)]" />
                 </div>
-                <a href="mailto:contact@tropical-massage.com" className="text-gray-300 hover:text-[var(--tropical-gold)] transition-colors duration-300">
-                  contact@tropical-massage.com
+                <a href="mailto:massagetropical23@gmail.com" className="text-gray-300 hover:text-[var(--tropical-gold)] transition-colors duration-300">
+                  massagetropical23@gmail.com
                 </a>
               </div>
             </div>

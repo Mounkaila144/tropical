@@ -52,7 +52,7 @@ export default function ContactSection() {
     {
       icon: Phone,
       title: 'Téléphone',
-      content: ['+227 85 46 30 56', '+227 81 21 45 55'],
+      content: ['+227 87 79 44 50', '+227 81 21 45 55'],
       link: 'tel:+22781214555'
     },
     {
