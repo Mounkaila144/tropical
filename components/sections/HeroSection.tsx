@@ -285,17 +285,6 @@ export default function HeroSection() {
             />
           </div>
 
-          {/* Enhanced Description */}
-          <p className={`text-lg md:text-xl lg:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed opacity-90 font-light transition-all duration-1000 delay-900 ${
-            isLoaded ? 'opacity-90 translate-y-0' : 'opacity-0 translate-y-4'
-          }`}>
-            Découvrez l&apos;art du massage thérapeutique avec nos techniques professionnelles :
-            <br className="hidden md:block" />
-            <span className="text-[var(--tropical-gold)] font-medium"> Massage Relaxant & Lomi Lomi</span>,
-            <span className="text-[var(--tropical-gold)] font-medium"> Massage Infrarouge & Tonic</span>,
-            <span className="text-[var(--tropical-gold)] font-medium"> Ventouse Thérapie & Massage Thaï</span>.
-          </p>
-
           {/* Stats Section with Adaptive Colors */}
           <div className={`flex flex-wrap justify-center gap-8 mb-12 transition-all duration-1000 delay-1100 ${
             isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'

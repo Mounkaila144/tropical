@@ -180,13 +180,7 @@ export default function MassageSection() {
           </div>
           <h2 className="text-5xl md:text-6xl font-playfair tropical-burgundy mb-6 luxury-text-glow">
             tropical <span className="text-[var(--tropical-gold)]">Massage </span>
-            <span className="sr-only"> - Salon de Coiffure Homme et Centre de Bien-être à Niamey, Niger</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Découvrez l'art de la beauté et du bien-être dans notre salon d'exception.
-            Nos coiffeurs professionnels et thérapeutes certifiés vous offrent des services
-            de coiffure homme, massage, épilation et soins du visage de qualité supérieure.
-          </p>
         </div>
 
         {/* Enhanced Features */}
